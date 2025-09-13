@@ -1,8 +1,8 @@
-Features
+🚀 Features
 
 Authentication (Laravel Breeze) with role-based access: admin, reviewer, candidate
 
-Admin/Reviewer:
+Admin/Reviewer
 
 Create and manage interviews
 
@@ -10,7 +10,7 @@ Add questions
 
 Review candidate submissions (with score + comment)
 
-Candidate:
+Candidate
 
 Record answers to interview questions via webcam/mic
 
@@ -18,7 +18,7 @@ Preview and submit answers
 
 Can only submit once per question
 
-Reviewer:
+Reviewer
 
 View candidate submissions
 
@@ -39,12 +39,12 @@ Auth: Laravel Breeze
 📦 Setup Instructions
 
 1. Clone Repo
-   git clone https://github.com/your-username/video-interview.git
-   cd video-interview
+   git clone https://github.com/pprateek767/videoInterview.git
+   cd videoInterview
 
 2. Install Dependencies
    composer install
-   npm install && npm run build
+   npm install
 
 3. Environment Setup
 
@@ -72,18 +72,29 @@ FILESYSTEM_DISK=public
 5. Run Migrations
    php artisan migrate
 
-(Optional) Seed an admin user:
+(Optional) Seed test users:
 
-php artisan db:seed --class=AdminSeeder
+php artisan db:seed
 
 6. Link Storage
    php artisan storage:link
 
-7. Start Server
-   php artisan serve
+7. Run the Server
 
-Visit http://127.0.0.1:8000
-🎉
+In two separate terminals:
+
+Terminal 1 (PHP server):
+
+php artisan serve
+
+Terminal 2 (Vite dev server for CSS/JS):
+
+npm run dev
+
+Visit 👉 http://127.0.0.1:8000/register
+to sign up.
+Or login 👉 http://127.0.0.1:8000/login
+.
 
 👤 Test Accounts
 Role Email Password
@@ -112,7 +123,3 @@ Video is stored locally (storage/app/public) — not integrated with cloud stora
 No email notifications yet.
 
 Only tested in Chrome/Edge (WebRTC API support required).
-
-📄 License
-
-MIT License.
